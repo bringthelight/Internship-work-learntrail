@@ -1,0 +1,24 @@
+-- Insert data into Departments
+INSERT INTO Departments (department_id, department_name) VALUES
+(1, 'Human Resources'),
+(2, 'Engineering'),
+(3, 'Sales');
+
+-- Insert data into Employees
+INSERT INTO Employees (employee_id, first_name, last_name, department_id, salary, date_of_joining) VALUES
+(1, 'John', 'Doe', 2, 75000, '2020-01-15'),
+(2, 'Jane', 'Smith', 2, 80000, '2019-06-01'),
+(3, 'Sam', 'Brown', 1, 50000, '2021-03-10'),
+(4, 'Sue', 'Johnson', 3, 65000, '2018-11-20');
+
+-- Insert data into Projects
+INSERT INTO Projects (project_id, project_name, start_date, end_date) VALUES
+(1, 'Project Alpha', '2022-01-01', '2022-12-31'),
+(2, 'Project Beta', '2023-01-01', '2023-06-30');
+
+-- Insert data into Employee_Projects
+INSERT INTO Employee_Projects (employee_id, project_id, hours_worked) VALUES
+(1, 1, 150.5),
+(2, 1, 200.0),
+(2, 2, 180.0),
+(4, 2, 160.0);

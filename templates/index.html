@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container mt-5 p-4 bg-light border rounded shadow" style="background: linear-gradient(to right, #8cbbea, #6787a9);">
+        <h2 class="mb-4 text-center text-primary">Registration Form</h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        <form class="p-3" method="POST" action="/" enctype="multipart/form-data">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label fw-bold">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstname" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label fw-bold">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastname" required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <label for="dob" class="form-label fw-bold">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required max="2007-12-31">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label fw-bold">Address</label>
+                <textarea class="form-control mb-2" id="address" name="address" rows="2" required></textarea>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="state" class="form-label fw-bold">State</label>
+                        <select class="form-select" id="state" name="state" required>
+                            <option value="" selected disabled>Select State</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="WB">West Bengal</option>
+                            <option value="GJ">Gujarat</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="country" class="form-label fw-bold">Country</label>
+                        <select class="form-select" id="country" name="country" required>
+                            <option value="" selected disabled>Select Country</option>
+                            <option value="IN">India</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="aadhar" class="form-label fw-bold">Aadhar Number</label>
+                <input type="text" class="form-control" id="aadhar" name="aadhaar" maxlength="12" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label fw-bold">Password</label>
+                <input type="password" class="form-control" id="password" name="password" 
+                       pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                       title="Password must be at least 8 characters long and include at least one letter, one number, and one special character"
+                       required>
+                <div class="form-text">
+                    Password must contain at least 8 characters, including letters, numbers, and special characters
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="resume" class="form-label fw-bold">Resume (PDF)</label>
+                <input type="file" class="form-control" id="resume" name="resume" accept=".pdf" required>
+            </div>
+            <div class="mb-3">
+                <label for="profile_image" class="form-label fw-bold">Profile Image</label>
+                <input type="file" class="form-control" id="profile_image" name="profile" accept=".jpg,.jpeg,.png,.webp" required>
+            </div>
+            <div class="mb-3">
+                <label for="fun video" class="form-label fw-bold">Fun Video</label>
+                <input type="file" class="form-control" id="fun_video" name="funvideo" accept=".mp4,.avi,.mov,.gif" placeholder="you can upload a short video such as gif and other short videos">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg px-4">Submit</button>
+            </div>
+            <div class="text-center mt-2">
+                <p>already have an account? <a href="/login" class="text-decoration-none">login here</a></p>
+            </div>
+        </form>
+    </div>
+    {% endblock %}
+   
+  

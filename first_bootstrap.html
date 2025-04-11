@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3 "></header>
+            <h1>Registration Form</h1>
+    </header>
+    <div class="container border rounded shadow-lg p-4 bg-light">
+        <div class="my-5">
+            <form action="#" method="POST">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required />
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address"  required> 
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label"> Street Address</label>
+                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required>
+                        <option selected>Select your country</option>
+                        <option value="1">India</option>
+                        <option value="2">United States</option>
+                        <option value="3">Canada</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                        <option selected>Select your state</option>
+                        <option value="1">Maharashtra</option>
+                        <option value="2">California</option>
+                        <option value="3">Ontario</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="aadharNo" class="form-label">Aadhar Number</label>
+                    <input type="text" class="form-control" id="aadharNo" placeholder="Enter your Aadhar number">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+            <p>&copy; 2023 Registration Form. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html></div>
